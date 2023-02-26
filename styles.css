@@ -37,7 +37,7 @@ h2 {
 
 h3 {
 	font-family: "DM Sans", sans-serif;
-	font-size: 18px;
+	font-size: 22px;
 	/**color: var(--white);**/
 	font-weight: 300;
 }
@@ -126,3 +126,60 @@ nav {
 	margin: 0.3rem 0 1rem;
 }
 
+button > ul > li {
+	color: var(--white)
+}
+
+.details {
+	font-family: "Public Sans", sans-serif;
+	color: var(--white);
+	font-size: 18px;
+	font-weight: 200;
+	line-height: 1.4;	
+}
+
+.collapsible {
+	background-color: var(--background);
+	color: var(--white);
+	cursor: pointer;
+	border: none;
+	margin-bottom: 0.5rem;
+}
+
+.collapsible span {
+	color: var(--highlight);
+}
+
+.collapsible a {
+	color: var(--highlight);
+	text-decoration: none;
+}
+
+.collapsible a:hover{
+	text-decoration: underline;
+}
+
+.date-location {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 16px;
+}
+
+.collap-content {
+	margin-top: -0.5rem;
+	margin-bottom: 1rem;
+	display: none;
+}
+
+.details {
+	  margin-left: 40px;
+    list-style-type: circle;
+}
+
+.projects > .container {
+	display: inline-flex;
+}
+
+.overlay .text {
+	color: var(--white);
+	font-family: 'Public Sans', san-serif;
+}
