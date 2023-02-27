@@ -1,3 +1,4 @@
+/* NAVBAR */
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
@@ -9,18 +10,17 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-var coll = document.getElementsByClassName("collapsible");
-var i;
+/*COLLAPSIBLES*/
+const headers = document.querySelectorAll(".collapsible-header");
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
+headers.forEach(header => {
+  header.addEventListener("click", () => {
+    header.classList.toggle("collapsed");
+    const content = header.nextElementSibling;
     if (content.style.display === "block") {
       content.style.display = "none";
     } else {
       content.style.display = "block";
     }
   });
-}
-
+});

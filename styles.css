@@ -68,6 +68,7 @@ nav {
 	top: 0;
 	overflow: hidden;
 	transition: top 0.3s;
+	z-index: 10;
 }
 
 .logo {
@@ -103,6 +104,7 @@ nav {
 	margin-right: 17vw;
 	/**border: 1px solid white;**/
 	overflow: hidden;
+	margin-bottom: 10vh;
 }
 
 .welcome {
@@ -126,60 +128,141 @@ nav {
 	margin: 0.3rem 0 1rem;
 }
 
-button > ul > li {
-	color: var(--white)
+.about .text{
+	width: 60%;
 }
 
-.details {
+.collapsible-list {
+  list-style-type: none;
+}
+
+.collapsible-header {
+  cursor: pointer;
+  font-weight: bold;
+	color: var(--white);
+	font-family: "DM Sans", sans-serif;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+.collapsible-header::before {
+  content: "\25B6";
+	font-size: 12px;
+  display: inline-block;
+  margin-right: 1rem;
+	top: -4px;
+	position: relative;
+	color: var(--highlight);
+}
+
+.collapsible-header.collapsed::before {
+  content: "\25BC";
+}
+
+.collapsible-header a, .collapsible-header span {
+	color: #49A6B2;
+	text-decoration: none;
+}
+
+.collapsible-header a:hover {
+	text-decoration: underline;
+}
+
+.collapsible-content {
+  display: none;
+	margin-left: 4rem;
 	font-family: "Public Sans", sans-serif;
 	color: var(--white);
 	font-size: 18px;
 	font-weight: 200;
-	line-height: 1.4;	
+	line-height: 1.4;
+	transition: height 0.3s ease-out;
 }
 
-.collapsible {
-	background-color: var(--background);
-	color: var(--white);
-	cursor: pointer;
-	border: none;
-	margin-bottom: 0.5rem;
-}
-
-.collapsible span {
-	color: var(--highlight);
-}
-
-.collapsible a {
-	color: var(--highlight);
-	text-decoration: none;
-}
-
-.collapsible a:hover{
-	text-decoration: underline;
-}
-
-.date-location {
+.details {
+	margin: 0.1rem 0 0.1rem -2.3rem;
 	font-family: 'IBM Plex Mono', monospace;
 	font-size: 16px;
 }
 
-.collap-content {
-	margin-top: -0.5rem;
+.collapsible-content ul li {
+	list-style: disc;
+}
+
+.collapsible-content ul {
 	margin-bottom: 1rem;
-	display: none;
 }
 
-.details {
-	  margin-left: 40px;
-    list-style-type: circle;
+.project-row {
+	display: flex;
 }
 
-.projects > .container {
-	display: inline-flex;
+.project-img {
+	padding-top: 15px;
+  padding-right: 30px;
 }
 
-.overlay .text {
+.image-text {
+	width: 300px;
+	height: 380px;
+	position: relative;
+	top: -380px;
+	margin-bottom: -380px;
+	display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+	opacity: 0;
+}
+
+.image-text:hover{
+	background: rgba(0, 0, 0, 0.3);
+	opacity: 100;
+	transition: ease-out 0.4s;
+}
+
+.image-overlay a {
+	text-decoration: none;
+}
+
+.project-span {
+	font-family: "DM Sans", sans-serif;
+	font-size: 22px;
+	color: var(--blue);
+	font-weight: 500;
+}
+
+.date-span {
+	font-family: "IBM Plex Mono", monospace;
 	color: var(--white);
-	font-family: 'Public Sans', san-serif;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.description-span {
+	font-family: "DM Sans", sans-serif;
+	font-size: 18px;
+	color: var(--white);
+	font-weight: 300;
+}
+
+.socials {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.socials img {
+	width: 30px;
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
+.socials a {
+	text-decoration: none;
+}
+
+.social a:hover {
+	text-decoration: bold;
 }
