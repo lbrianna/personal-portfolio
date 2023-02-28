@@ -84,7 +84,7 @@ nav {
 	font-family: 'Public Sans', sans-serif;
 	font-size: 20.7px;
   display: inline-block;
-  padding: 10px 15px;
+  padding: 15px 25px;
   text-decoration: none;
   color: var(--blue);
 }
@@ -96,6 +96,28 @@ nav {
 .logo {
   width: 70px;
   vertical-align: middle;
+}
+
+.fixed-links {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	opacity: 0.5;
+	bottom: 0;
+	margin-left: 6vw;
+}
+
+.fixed-links img {
+	width: 30px;
+	height: 30px;
+	margin-bottom: 0.5rem;
+}
+
+.vertical-line {
+	height: 15vh;
+	width: 2px;
+	background: white;
+	align-self: center;
 }
 
 .section {
@@ -128,8 +150,15 @@ nav {
 	margin: 0.3rem 0 1rem;
 }
 
-.about .text{
-	width: 60%;
+
+.about-container{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	column-gap: 10%;
+}
+
+.about-container img {
+	width: 400px;
 }
 
 .collapsible-list {
@@ -170,7 +199,7 @@ nav {
 }
 
 .collapsible-content {
-  display: none;
+	display: none;
 	margin-left: 4rem;
 	font-family: "Public Sans", sans-serif;
 	color: var(--white);
@@ -265,4 +294,116 @@ nav {
 
 .social a:hover {
 	text-decoration: bold;
+}
+
+@media screen and (max-width: 576px){
+	.nav-item a {
+		font-size: 16px;
+		padding-left: 0.5px;
+	}
+	.section, .welcome {
+		margin-left: 10vw;
+		margin-right: 10vw;
+	}
+	.fixed-links {
+			display: none;
+		}
+	
+	h1 {
+		font-size: 70px;
+	}
+	
+	.about img {
+		display: none;
+	}
+	
+	.about-container {
+		display: flex;
+	}
+	
+	.project-row {
+		overflow: scroll;
+		overflow-y: hidden;
+	}
+	
+	
+}
+
+@media screen and (max-width: 768px){
+	.section, .welcome {
+		margin-right: 10vw;
+		margin-left: 10vw;
+	}
+	h1 {
+		font-size: 90px;
+	}
+	
+	.fixed-links {
+		margin-left: 2.5vw;
+	}
+	
+	.fixed-links div {
+		height: 6vh;
+	}
+	
+	.fixed-links img {
+		width: 25px;
+		height: 25px;
+	}
+	
+	.about img {
+		width: 315px;
+	}
+	
+	.about-container {
+		grid-template-columns: 50% 50%;
+		column-gap: 3%;
+	}
+	
+	.project-row {
+		overflow: scroll;
+		overflow-y: hidden;
+	}
+}
+
+@media screen and (max-width: 1250px){
+	
+	.section {
+		margin-right: 15vw;
+		margin-left: 15vw;
+	}
+	
+	.welcome {
+		margin-right: 30vw;
+	}
+	
+	h1 {
+		font-size: 90px;
+	}
+	
+	.fixed-links {
+		margin-left: 2.5vw;
+	}
+	
+	.fixed-links div {
+		height: 6vh;
+	}
+	
+	.fixed-links img {
+		width: 25px;
+		height: 25px;
+	}
+	
+	.about img {
+		width: 315px;
+	}
+	
+	.about-container {
+		grid-template-columns: 50% 50%;
+		column-gap: 3%;
+	}
+	
+	.projects {
+		margin-right: 0;
+	}
 }
