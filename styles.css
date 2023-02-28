@@ -296,7 +296,15 @@ nav {
 	text-decoration: bold;
 }
 
-@media screen and (max-width: 576px){
+@media only screen and (max-width: 460px){
+	.welcome {
+	padding-top: 0;
+	margin-top: 20vh;
+	margin-right: 0vw;
+	height: 80vh;
+	width: 70vw;
+}
+	
 	.nav-item a {
 		font-size: 16px;
 		padding-left: 0.5px;
@@ -305,11 +313,12 @@ nav {
 		margin-left: 10vw;
 		margin-right: 10vw;
 	}
+	
 	.fixed-links {
 			display: none;
 		}
 	
-	h1 {
+	.welcome h1 {
 		font-size: 70px;
 	}
 	
@@ -326,13 +335,18 @@ nav {
 		overflow-y: hidden;
 	}
 	
+	.image-overlay {
+		display: show;
+	}
+	
 	
 }
 
-@media screen and (max-width: 768px){
+@media only screen and (max-width: 768px){
 	.section, .welcome {
 		margin-right: 10vw;
 		margin-left: 10vw;
+		width: 70vw;
 	}
 	h1 {
 		font-size: 90px;
@@ -366,7 +380,7 @@ nav {
 	}
 }
 
-@media screen and (max-width: 1250px){
+@media only screen and (max-width: 1250px){
 	
 	.section {
 		margin-right: 15vw;
